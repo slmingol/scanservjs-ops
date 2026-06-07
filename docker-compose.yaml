@@ -1,6 +1,9 @@
 services:
   scanservjs:
     image: ghcr.io/slmingol/scanservjs-ops:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.scanservjs
     container_name: scanservjs
     restart: unless-stopped
     ports:
