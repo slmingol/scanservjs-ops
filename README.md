@@ -1,5 +1,10 @@
 # scanservjs-ops
 
+![GitHub last commit](https://img.shields.io/github/last-commit/slmingol/scanservjs-ops)
+![GitHub repo size](https://img.shields.io/github/repo-size/slmingol/scanservjs-ops)
+![Docker base](https://img.shields.io/badge/base%20image-sbs20%2Fscanservjs-blue?logo=docker)
+![Platform](https://img.shields.io/badge/platform-linux%2Famd64-lightgrey)
+
 Web-based scanning for a Brother MFC-8480DN over WiFi on macOS, using a Debian Docker host as the scan relay.
 
 ## Architecture
