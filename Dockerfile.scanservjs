@@ -1,0 +1,17 @@
+FROM sbs20/scanservjs:latest
+
+USER root
+
+# Install wget
+RUN apt-get update && apt-get install -y wget libusb-1.0-0 && rm -rf /var/lib/apt/lists/*
+
+# Install brscan4
+RUN wget -q https://download.brother.com/welcome/dlf105200/brscan4-0.4.11-1.amd64.deb \
+    && dpkg -i --force-all brscan4-0.4.11-1.amd64.deb \
+    && rm brscan4-0.4.11-1.amd64.deb
+
+# Copy custom entrypoint
+COPY entrypoint.scanservjs.sh /entrypoint-brother.sh
+RUN chmod +x /entrypoint-brother.sh
+
+ENTRYPOINT ["/entrypoint-brother.sh"]

@@ -1,0 +1,14 @@
+services:
+  scanservjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.scanservjs
+    container_name: scanservjs
+    restart: unless-stopped
+    ports:
+      - "8088:8080"
+    volumes:
+      - ./scans:/app/data/output
+    environment:
+      - SCANNER_IP=192.168.13.13
+    privileged: true

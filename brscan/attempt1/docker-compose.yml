@@ -1,0 +1,11 @@
+services:
+  brother-saned:
+    build: .
+    container_name: brother-saned
+    restart: unless-stopped
+    environment:
+      - SCANNER_IP=192.168.13.13
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./scans:/scans
