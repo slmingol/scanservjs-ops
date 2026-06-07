@@ -8,6 +8,8 @@
 
 Web-based scanning for a Brother MFC-8480DN over WiFi on macOS, using a Debian Docker host as the scan relay.
 
+![scanservjs screenshot](https://github.com/sbs20/scanservjs/raw/master/docs/screen0.jpg)
+
 ## Architecture
 
 ```
