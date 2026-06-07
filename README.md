@@ -105,11 +105,3 @@ docker exec -it scanservjs \
   -a name=MFC-8480DN model=MFC-8480DN ip=192.168.13.13
 ```
 
-## What was tried first (and failed)
-
-`attempt1/` and `brscan/attempt1/` in git history contain a custom SANE 1.4.0 build + `saned` relay approach. It failed due to:
-
-- SANE protocol version mismatch between Mac client and container server
-- `saned` 1.4.0 assertion crash in standalone mode
-
-scanservjs sidesteps this entirely by speaking HTTP instead of the SANE network protocol.
