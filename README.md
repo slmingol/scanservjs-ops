@@ -1,8 +1,9 @@
 # scanservjs-ops
 
+![Build](https://img.shields.io/github/actions/workflow/status/slmingol/scanservjs-ops/build-push.yml?label=build&logo=github)
 ![GitHub last commit](https://img.shields.io/github/last-commit/slmingol/scanservjs-ops)
 ![GitHub repo size](https://img.shields.io/github/repo-size/slmingol/scanservjs-ops)
-![Docker base](https://img.shields.io/badge/base%20image-sbs20%2Fscanservjs-blue?logo=docker)
+![Container](https://img.shields.io/badge/ghcr.io-slmingol%2Fscanservjs--ops-blue?logo=docker)
 ![Platform](https://img.shields.io/badge/platform-linux%2Famd64-lightgrey)
 
 Web-based scanning for a Brother MFC-8480DN over WiFi on macOS, using a Debian Docker host as the scan relay.
@@ -47,7 +48,24 @@ On the Debian host:
 ```bash
 git clone https://github.com/slmingol/scanservjs-ops.git
 cd scanservjs-ops
-docker compose -f docker-compose.yaml up --build -d
+docker compose -f docker-compose.yaml up -d
+```
+
+`docker-compose.yaml` pulls `ghcr.io/slmingol/scanservjs-ops:latest` directly — no local build needed.
+
+To pin a specific version, edit the `image:` line:
+
+```yaml
+image: ghcr.io/slmingol/scanservjs-ops:1.0.0
+```
+
+### Versioning
+
+Images are tagged by CI on every push to `main` (`latest`) and on `v*.*.*` git tags (semver). To cut a release:
+
+```bash
+git tag v1.1.0
+git push origin v1.1.0
 ```
 
 Verify scanner detected:

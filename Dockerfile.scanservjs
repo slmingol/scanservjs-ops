@@ -1,5 +1,11 @@
 FROM sbs20/scanservjs:latest
 
+ARG VERSION=dev
+LABEL org.opencontainers.image.title="scanservjs-ops" \
+      org.opencontainers.image.description="scanservjs with brscan4 for Brother MFC-8480DN" \
+      org.opencontainers.image.source="https://github.com/slmingol/scanservjs-ops" \
+      org.opencontainers.image.version="${VERSION}"
+
 USER root
 
 # Install wget
