@@ -1,6 +1,6 @@
 # scanservjs-ops
 
-![Build](https://img.shields.io/github/actions/workflow/status/slmingol/scanservjs-ops/build-push.yml?label=build&logo=github)
+![Build](https://img.shields.io/github/actions/workflow/status/slmingol/scanservjs-ops/ci.yml?label=build&logo=github)
 ![GitHub last commit](https://img.shields.io/github/last-commit/slmingol/scanservjs-ops)
 ![GitHub repo size](https://img.shields.io/github/repo-size/slmingol/scanservjs-ops)
 ![Container](https://img.shields.io/badge/ghcr.io-slmingol%2Fscanservjs--ops-blue?logo=docker)
